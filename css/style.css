@@ -1,0 +1,123 @@
+
+/*
+========================
+CSS global
+=======================
+*/
+@charset "UTF-8";
+*{
+  margin: 0;
+}
+:root{
+  --Cor1DaPaletaClara: rgb(179, 178, 178);
+  --Cor2DaPalaetaClara : rgb(209, 197, 197);
+  --CorPreta: rgba(4, 3, 3, 0.911);
+  --FonteArial: Arial;
+  --FontSizeGrande: 30px;
+  --FontSizeMedio: 18px;
+  --FontSizePequeno: 14px;
+  --CorVermelhaEscura: rgba(157, 14, 14, 0.944);
+}
+/*
+========================
+Css do Menu Principal
+========================
+*/
+.menuprincipal{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 40px 40px 40px;
+}
+.menuprincipal li{
+  display: inline-flex;
+}
+.menuprincipal li a{
+  text-decoration: none;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px 20px 0px 0px;
+  line-height: 8px;
+  color: var(--CorPreta);
+  font-family: var(--FonteArial);
+}
+/*
+=========================
+/ Css do Grid de anúncio
+/Do Index
+=========================
+*/
+.grid_carros{
+  margin-top: 40px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 400px 520px;
+  grid-template-rows: 100px 200px 200px;
+  place-content: center center;
+  gap: 20px;
+}
+.grid_carros img{
+  max-width: 100%;
+}
+.infor_site{
+  display: grid;
+  background-color: #f0f0f0;
+  grid-template-columns: 530px;
+  gap: 10px;
+  grid-template-rows: 100px 300px 100px;
+}
+.infor_site h1{
+  place-self: center center;
+  font-size: 20px;
+}
+.infor_site p{
+  place-self: center center;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Arial';
+}
+.explora{
+  place-self: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background: red;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+/*
+============================
+/Css do Main
+============================
+*/
+#Introducao{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 500px 500px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+#Introducao img{
+  max-width: 500px;
+}
+.IntroducaoHistoria{
+  display: grid;
+  grid-template-rows: 50px 200px 200px;
+  place-content: center;
+  gap: 20px;
+}
+.IntroducaoHistoria h2{
+  padding: 10px;
+  font-family: var(--FonteArial);
+  place-self: center center;
+  color: rgba(190, 10, 10, 0.887);
+}
+.IntroducaoHistoria p{
+  text-align: justify;
+  font-size: 20px;
+  font-family: var(--FonteArial);
+}
+.InforImportante{
+  color: rgba(157, 14, 14, 0.944);
+}
