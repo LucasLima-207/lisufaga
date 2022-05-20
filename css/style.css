@@ -8,6 +8,7 @@ CSS global
 *{
   margin: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;700&display=swap');
 :root{
   --Cor1DaPaletaClara: rgb(179, 178, 178);
   --Cor2DaPalaetaClara : rgb(209, 197, 197);
@@ -19,33 +20,92 @@ CSS global
   --CorVermelhaEscura: rgba(157, 14, 14, 0.944);
   --CorBranca: #fff;
   --LinearVermelho: linear-gradient(to right, #f00, rgb(216, 22, 22), rgb(184, 19, 19), rgb(153, 15, 15));
+  --LinearGradienteVermelho2: linear-gradient(to left, #cd0101db, #ba0110, #cd0101be);
+  --LinearGradientBlue: linear-gradient( to left, #E2D5C4, #577887, #060A0D);
+  --LinearGradientBlack: linear-gradient(to left, #040809d0, #05090cfe, #05090ceb);
+  --LinearGradientBlack2: linear-gradient(to right, #040809a0, #05090cd2, #05090c);
   --LinearBody: linear-gradient(to right, rgba(106, 104, 104, 0.864),  rgba(234, 225, 225, 0.889),  rgba(230, 230, 230, 0.683),rgba(240, 240, 240, 0.798));
 } 
 .BodyPrincipal{
-  background-image: var(--LinearBody);
+  background-image: var(--LinearGradientBlue);
 }
 /*
 ========================
 Css do Menu Principal
 ========================
 */
-.menuprincipal{
+.BemVindo{
+  background: url("../img/imagemreduzida.jpg");
+  background-attachment: fixed;
+  height: 700px;
+  position: relative;
+}
+.Menu{
+  list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin: 10px 40px 10px 40px;
+  gap: 20px;
+  place-content: end;
+  height: 80px;
+  background: var(--LinearGradientBlack2);
 }
-.menuprincipal li{
-  display: inline-flex;
+.Menu li{
+  margin-top: 25px;
 }
-.menuprincipal li a{
+.Menu li a{
+  font-size: 18px;
   text-decoration: none;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 20px 20px 0px 0px;
-  line-height: 8px;
-  color: var(--CorPreta);
-  font-family: var(--FonteArial);
+  padding: 10px;
+  color: var(--CorBranca);
+}
+.Menu li a:hover{
+  border-bottom: 2px solid red;
+}
+@keyframes hovermenu {
+  20%{
+    border: solid var(--CorVermelhaEscura);
+    border-bottom-width: 2px;
+  }
+  40%{
+    border: solid var(--CorVermelhaEscura);
+    border-bottom-width: 3px;
+  }
+  60%{
+    border: solid var(--CorVermelhaEscura);
+    border-bottom-width: 4.5px;
+  }
+  80%{
+    border: solid var(--CorVermelhaEscura);
+    border-bottom-width: 5px;
+  }
+  100%{
+    border: solid var(--CorVermelhaEscura);
+    border-bottom-width: 6px;
+  }
+}
+.InforSobreNos{
+  text-align: center;
+  border-radius: 10px;
+  gap: 10px;
+  color: whitesmoke;
+  display: grid;
+  grid-template-columns: 400px;
+  grid-template-rows: 100px 200px 100px;
+  margin-top: 50px;
+  margin-left: 20px;
+  background: var(--LinearGradientBlack2);
+  height: 400px;
+  width: 400px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+.InforSobreNos p{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.InforSobreNos h2{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
 }
 /*
 =========================
@@ -53,80 +113,13 @@ Css do Menu Principal
 /Do Index
 =========================
 */
-.BemVindo{
-  background-image: url("../img/josh-berquist-_4sWbzH5fp8-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-attachment: cover;
-  background-size: 100vw 600px;
-  display: grid;
-  grid-template-columns: 600px 500px;
-  gap: 20px;
-  height: 600px;
-}
-.grid_carros{
-  margin-top: 80px;
-  margin-bottom: 80px;
-  display: grid;
-  grid-template-columns: 400px 520px;
-  grid-template-rows: 100px 200px 200px;
-  place-content: center center;
-  gap: 20px;
-}
-.grid_carros img{
-  max-width: 100%;
-  animation-name: bonito;
-}
-.infor_site{
-  display: grid;
-  background-color: #f0f0f0;
-  grid-template-columns: 530px;
-  gap: 10px;
-  grid-template-rows: 100px 300px 100px;
-}
-.infor_site h1{
-  place-self: center center;
-  font-size: 20px;
-  color: var(--CorVermelhaEscura);
-  font-family: Arial, Helvetica, sans-serif;
-}
-.infor_site p{
-  place-self: center center;
-  padding-left: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  font-family: 'Arial';
-}
-.explora{
-  place-self: center;
-  text-decoration: none;
-  border-radius: 4px;
-  background: red;
-  padding: 20px;
-  color: rgb(255, 255, 255);
-}
+
 /*
 ============================
 /Css do Main
 ============================
 */
-.BemVindo{
-  background: url("../img/aaron-huber-8qYE6LGHW-c-unsplash.jpg");
-  height: 700px;
-  display: grid;
-  grid-template-columns: 400px;
-  background-size: 100vw 700px;
-}
-.InforBemVindo{
-  position: absolute;
-  display: grid;
-  columns: reverse;
-  justify-self: center;
-  align-self: center;
-  width: 600px;
-  height: 500px;
-  background-color: rgba(0, 0, 0, 0.646);
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+
 #Introducao{
   display: grid;
   gap: 20px;
@@ -143,9 +136,13 @@ Css do Menu Principal
   border-radius: 5px;
  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+.IntroducaoHistoria {
+  display: grid;
+  padding-left: 20px;
+  font-family: 'Oswald', sans-serif;;
+}
 .IntroducaoHistoria h2{
   padding: 10px;
-  font-family: var(--FonteArial);
   text-align: center;
   place-self: center center;
   color: rgba(190, 10, 10, 0.887);
@@ -159,7 +156,6 @@ Css do Menu Principal
   text-align: justify;
   font-size: 20px;
   line-height: -4px;
-  font-family: var(--FonteArial);
 }
 .IntroducaoHistoria p::first-letter{
   margin-left: 40px;
@@ -169,8 +165,8 @@ Css do Menu Principal
   border-radius: 10px;
   background: var(--CorVermelhaEscura);
   padding: 10px;
+  place-self: center;
   color: beige;
-  place-self: center center;
 }
 .InforImportante{
   color: rgba(157, 14, 14, 0.944);
@@ -205,11 +201,23 @@ Css do Menu Principal
   background-size: 300px 500px;
   background-position: center cover;
 }
+.SaibaMais{
+  background: var(--LinearGradienteVermelho2);
+  padding: 10px;
+}
 .EstiloDeVeiculo{
+  text-align: center;
   width: 300px;
   height: 480px;
   clip-path: polygon(20% 0, 80% 0, 60% 120%, 0 120%);
   box-shadow: 5px 5px 10px black;
+  grid-template-columns: 400px;
+}
+.EstiloDeVeiculo a{
+  display: inline-block;
+  padding: 20px;
+  color: whitesmoke;
+  text-decoration: none;
 }
 .EstiloDeVeiculo img{
   max-width: 300px;
@@ -221,7 +229,7 @@ Css do Menu Principal
   place-content: center;
   gap: 20px;
   height: 700px;
-  background: var(--LinearVermelho);
+  background: var(--LinearGradientBlack);
 }
 .PlanoDeSeguro{
   width: 400px;
@@ -238,9 +246,9 @@ Css do Menu Principal
 .FooterMain{
   display: flex;
   place-content: center center;
-  padding: 20px;
+  padding: 20px;font-family: var(--FonteArial);
   color: whitesmoke;
-  background: var(--LinearVermelho);
+  background: var(--LinearGradientBlack);
 }
 .FooterMain p{
   text-align: center;
